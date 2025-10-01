@@ -55,7 +55,7 @@ a {
     min-height: 757px;
     background-position: center;
     background-size: cover;
-    z-index: -2;
+    z-index: 0;
     padding-top: 165px;
 }
 
@@ -63,7 +63,7 @@ a {
     position: absolute;
     inset: 0;
     background: rgba(0,0,0,0.6);
-    z-index: -1;
+    z-index: 1;
 }
 
 .title {
@@ -77,17 +77,22 @@ a {
     letter-spacing: 30px;
 }
 
+.left__line {
+    z-index: 2;
+}
 
-.second__line {
+.center__line {
     text-align: center;
     margin-right: -30px;
     margin-top: 19px;
+    z-index: 2;
 }
 
-.third__line {
+.right__line {
     text-align: end;
     margin-right: -30px;
     margin-top: 14px;
+    z-index: 2;
 }
 
 .description {
@@ -103,16 +108,18 @@ a {
 
 .subline {
     word-spacing: 19px;
+    z-index: 2;
 }
 
 .bet-button {
     background: transparent;
-    border: 1px solid #FFFFFF;
+    border: 1px solid currentColor;
     font-weight: 500;
     color: #FFFFFF;
     font-size: 22px;
     text-transform: uppercase;
     padding: 12px 32px 11px 31px;
+    z-index: 2;
 }
 
 .lots {
@@ -136,39 +143,30 @@ a {
 }
 
 .frame {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    z-index: 0;
     width: 334px;
     min-height: 596px;
     background-size: cover;
     background-position: center;
     position: relative;
-    margin-bottom: 30px;
 }
 
 .frame__title, .frame__link {
     height: 100%;
 }
 
-.frame__first {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    z-index: -2;
+.frame__left {
     background-image: url(../images/card-lot-01.jpg);
 }
 
-.frame__second {
-     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    z-index: -2;
+.frame__center {
     background-image: url(../images/card-lot-02.jpg);
 }
 
-.frame__third {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    z-index: -2;
+.frame__right {
     background-image: url(../images/card-lot-03.jpg);
 }
 
@@ -181,6 +179,7 @@ a {
     text-decoration: underline;
     text-underline-offset: 10%;
     text-decoration-thickness: 1px;
+    z-index: 2;
 }
 
 .description__lot {
@@ -188,12 +187,15 @@ a {
     color: #FFFFFF;
     font-weight: 400;
     font-size: 20px;
+    z-index: 2;
 }
 
 .more {
+    display: block;
     margin-left: 40px;
+    margin-top: 30px;
     text-decoration: underline;
-    text-underline-offset: 10%;
+    text-underline-offset: 20%;
     font-size: 20px;
 }
 
@@ -241,6 +243,7 @@ footer {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     margin-top: 209px;
+    padding-bottom: 82px;
 }
 
 .address__footer {
